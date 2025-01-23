@@ -62,7 +62,7 @@ fn map_os_version_info(version_info: OSVERSIONINFOW) -> Result<OsVersion, UserCa
         OSVERSIONINFOW {
             dwMajorVersion: 10,
             dwMinorVersion: 0,
-            dwBuildNumber: ..22000,
+            dwBuildNumber: ..20292,
             ..
         } => Ok(OsVersion::Win10),
         OSVERSIONINFOW {
