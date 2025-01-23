@@ -10,7 +10,7 @@ use windows::{
 };
 
 #[repr(usize)]
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[derive(Copy, Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 pub enum UserCallError {
     OsNotSupported = 1,
     OsTooNew = 2,

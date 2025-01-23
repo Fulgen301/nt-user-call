@@ -208,7 +208,7 @@ macro_rules! nt_user_call {
     ( #![doc = $enumdoc:literal] $(#[doc = $doc:literal] $syscall:ident $vis:vis fn $name:ident ($($funcdef:tt)*) -> $rettype:ty;)+ ) => {
         #[doc = $enumdoc]
         #[allow(non_camel_case_types)]
-        #[derive(Debug, Clone, Copy)]
+        #[derive(Copy, Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
         pub enum NtUserCall {
             $($name),+
         }

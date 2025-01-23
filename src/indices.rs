@@ -9,7 +9,7 @@ macro_rules! user_call_enum {
         pub mod $os {
             #[allow(non_camel_case_types)]
             #[repr(u16)]
-            #[derive(Debug, Clone, Copy)]
+            #[derive(Copy, Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
             pub enum NtUserCallIndex {
                 $($variant $(= $index)?),+
             }

@@ -7,7 +7,7 @@ use windows::{
 use crate::error::UserCallError;
 
 #[repr(u8)]
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Copy, Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 pub enum OsVersion {
     #[cfg(any(target_vendor = "win7", feature = "all_os_versions"))]
     Win7,
