@@ -1,6 +1,6 @@
 [package]
 name = "nt-user-call"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["George Tokmaji <tokmajigeorge@gmail.com>"]
 edition = "2021"
 description = "Provides bindings to all functions accessible via the `NtUserCall*` family of system calls."
