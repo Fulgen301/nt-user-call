@@ -1,0 +1,38 @@
+[package]
+name = "nt-user-call"
+version = "0.1.0"
+authors = ["George Tokmaji <tokmajigeorge@gmail.com>"]
+edition = "2021"
+description = "Provides bindings to all functions accessible via the `NtUserCall*` family of system calls."
+repository = "https://github.com/Fulgen301/nt_user_call"
+license = "MIT OR Apache-2.0"
+keywords = ["nt", "ntuser", "windows"]
+categories = ["os::windows-apis"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+paste = "1.0.15"
+
+[dependencies.windows]
+version = "0.59.0"
+features = [
+    "Wdk_Foundation",
+    "Wdk_System_SystemServices",
+    "Win32_Devices_Display",
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Security",
+    "Win32_System_IO",
+    "Win32_System_LibraryLoader",
+    "Win32_System_StationsAndDesktops",
+    "Win32_System_SystemInformation",
+    "Win32_System_Threading",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging"
+]
+
+[features]
+all_os_versions = []
